@@ -1,0 +1,1542 @@
+/* Reset some default styles for better consistency */
+@font-face {
+    font-family: Founders;
+    src: url(font/FoundersGrotesk-Semibold.ttf);
+}
+
+@font-face {
+    font-family: Neue;
+    src: url(font/NeueMontreal-Regular.ttf);
+}
+
+@font-face {
+    font-family: ico;
+    src: url(font/icomoon.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --nav-color: black;
+    --bgc: #F1F1F1;
+}
+
+button {
+    background-color: white;
+    padding: 5px 15px;
+    border: 2px solid black;
+    font-size: 1em;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+
+/* Add specific styles for smaller screens here */
+#page1 {
+    height: 90vh;
+    width: 100%;
+    background-color: var(--bgc);
+    position: relative;
+    z-index: 1;
+}
+
+#page1 nav .middle {
+    display: none;
+}
+
+#page1 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f1f1f196;
+    backdrop-filter: blur(5px);
+    display: flex;
+    /* flex - none */
+    justify-content: space-between;
+    padding: 10px 20px;
+    overscroll-behavior: contain;
+    z-index: 999;
+    transition: 0.3s ease-in-out;
+}
+
+#page1 nav .logo {
+    font-family: neue;
+    font-size: 2em;
+    color: var(--nav-color);
+    z-index: 999;
+}
+
+#page1 nav .menu {
+    color: var(--nav-color);
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+#page1 .links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: fit-content;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    padding: 150px 20px;
+    z-index: 888;
+    transform: translateY(-100%);
+    overscroll-behavior: contain;
+    transition: 0.3s ease-in-out;
+}
+
+#page1 .links::-webkit-scrollbar {
+    display: none;
+}
+
+#page1 .links .menu-links {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px 5px;
+}
+
+
+#page1 .links .menu-links a {
+    color: white;
+    font-family: Founders;
+    font-weight: 700;
+    font-size: 4em;
+    line-height: 1em;
+    letter-spacing: -1px;
+    text-shadow: -1px 1px 1px rgb(83, 83, 83);
+    text-transform: uppercase;
+
+}
+
+#page1 .links .footer-links {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-family: neue;
+}
+
+#page1 .links .footer-links h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+#page1 .links .footer-links a {
+    color: white;
+    text-transform: capitalize;
+    text-decoration: underline;
+
+}
+
+#page1 .links .footer-links h3 {
+    color: white;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+#page1 .hero {
+    height: 95vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page1 .hero .hero-text {
+    margin-top: 100px;
+    padding: 10px;
+}
+
+#page1 .hero .hero-text .text-elem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#page1 .hero .hero-text .text-elem img {
+    /* width: 100%; */
+    height: 2.5em;
+    border-radius: 5px;
+    transform: translateY(3px);
+    z-index: -1;
+}
+
+#page1 .hero .hero-text .text-elem h1 {
+    font-family: Founders;
+    text-transform: uppercase;
+    font-size: 4em;
+    line-height: 0.8em;
+}
+
+#page1 .hero .hero-footer {
+    margin-bottom: 6em;
+    font-family: neue;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 2px solid rgb(155, 154, 154);
+    padding: 12px 10px;
+
+}
+
+#page1 .hero .hero-footer h3 {
+    font-size: 0.8em;
+}
+
+#page1 .hero .hero-footer h3 span {
+    text-transform: uppercase;
+}
+
+#page1 .hero .hero-footer button {
+    width: 12em;
+    border-radius: 50px;
+    font-weight: 500;
+    outline: none;
+    border: 2px solid rgb(0, 0, 0);
+    text-transform: uppercase;
+    padding: 5px 3px;
+}
+
+#page2 {
+    /* height: 100vh; */
+    width: 100%;
+}
+
+#page2 .marquee {
+    width: 100%;
+    height: 35vh;
+    background-color: #004D43;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#page2 .marquee .mar-slider {
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+    border-top: 1px solid #26685F;
+    border-bottom: 1px solid #26685F;
+    padding: 0px 0 10px 0;
+}
+
+#page2 .marquee .mar-slider p {
+    text-transform: uppercase;
+    font-family: Founders;
+    font-size: 7em;
+    letter-spacing: -2px;
+    text-wrap: nowrap;
+    color: white;
+    line-height: 0.8em;
+    text-align: center;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#page3 {
+    width: 100%;
+    background-color: #CDEA68;
+    border-radius: 20px;
+    margin-top: -20px;
+    font-family: neue;
+    z-index: 9;
+}
+
+#page3 .section1 {
+    padding: 50px 10px;
+    border-bottom: 1px solid #99AD53;
+}
+
+#page3 .section1 p {
+    font-size: 1.6em;
+    line-height: 1.1em;
+    text-wrap: wrap;
+}
+
+#page3 .section1 p span {
+    text-decoration: underline;
+}
+
+#page3 .section2 {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#page3 .section2 h3 {
+    font-size: 1.1em;
+    font-weight: 100;
+    text-wrap: wrap;
+    line-height: 1.4em;
+}
+
+#page3 .section2 .middle {
+    width: 19em;
+}
+
+#page3 .section2 .right {
+    display: flex;
+    flex-direction: column;
+}
+
+#page3 .section2 .right .right-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+#page3 .section2 .right h1 {
+    font-size: 1.5em;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+#page3 .section2 .right a {
+    font-size: 1em;
+    font-weight: 100;
+    color: black;
+    line-height: 1.4em;
+    text-decoration: underline;
+}
+
+#page3 .section3 {
+    margin-top: 50px;
+    border-top: 1px solid #99AD53;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#page3 .section3 .left button {
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    border: none;
+    margin-top: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#page3 .section3 .left button span {
+    font-size: 2em;
+}
+
+#page3 .section3 .right {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#page3 .section3 .right img {
+    width: 100%;
+    scale: 1.2;
+    object-position: center;
+    object-fit: cover;
+}
+
+#page4 {
+    width: 100%;
+    height: 40vh;
+    margin-top: -20px;
+    overflow: hidden;
+    z-index: -9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #EBEBEB;
+    padding: 0 20px;
+}
+
+#page4 img {
+    width: 100%;
+    box-shadow: -5px 5px 30px rgb(114, 112, 112);
+    object-fit: cover;
+}
+
+.eye-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.eye-container .eyes {
+    width: 33vw;
+    height: 33vw;
+}
+
+.eye-container .eyes .layer-1 {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-container .eyes .layer-1 .layer-2 {
+    background-color: black;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-container .eyes .layer-1 .layer-2 h2 {
+    color: white;
+    font-size: 2.5vw;
+    font-family: neue;
+    text-transform: uppercase;
+}
+
+.eye-container .eyes .layer-1 .layer-2 .layer-3 {
+    width: 15%;
+    height: 15%;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#page5 {
+    width: 100%;
+    background-color: #ffffff;
+    height: fit-content;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: -20px;
+    font-family: neue;
+    position: relative;
+    padding-top: 50px;
+}
+
+#page5 h1 {
+    margin: 10px 20px;
+    font-weight: 100;
+}
+
+#page5 .container5 {
+    width: 100%;
+    height: fit-content;
+    border-top: 1px solid #B2B2B2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#page5 .container5 .pro-elems {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+#page5 .container5 .pro-elems .elems-title {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#page5 .container5 .pro-elems .elems-title .dot {
+    font-size: 3em;
+    line-height: 0.7em;
+}
+
+#page5 .container5 .pro-elems .elems-title .title {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 100;
+    line-height: 0.7em;
+}
+
+#page5 .container5 .pro-elems .elem-img {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+#page5 .container5 .pro-elems .elem-img img {
+    width: 100%;
+    scale: 1.1;
+}
+
+#page5 .container5 .pro-elems .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+#page5 .case-btn {
+    background-color: black;
+    max-width: 280px;
+    /* height: 80px; */
+    border-radius: 50px;
+    color: white;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px 6px 25px;
+}
+
+#page5 .case-btn h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+
+#page5 .case-btn .arr {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scale: 0.2;
+}
+
+#page5 .case-btn .arr i {
+    display: none;
+    color: black;
+    font-size: 2em;
+}
+
+#page6 {
+    width: 100%;
+    font-family: neue;
+}
+
+#page6 .page-title {
+    margin: 30px 0;
+    padding: 20px;
+}
+
+#page6 .page-title h1 {
+    font-size: 2em;
+    font-weight: 100;
+}
+
+#page6 .container6 {
+    width: 100%;
+    height: fit-content;
+    border-collapse: collapse;
+    position: relative;
+}
+
+#page6 .container6 .review {
+    border-top: 1px solid #B2B2B2;
+    border-bottom: 1px solid #B2B2B2;
+    padding: 0 20px;
+    width: 100%;
+    overflow: hidden;
+    height: max-content;
+    position: relative;
+    min-height: 60px;
+
+}
+
+#page6 .container6 .review .review-top {
+
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+}
+
+#page6 .container6 .review .review-top .title {
+    font-size: 1.2em;
+    font-weight: 100;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+#page6 .container6 .review .review-top .read {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-align: end;
+    font-weight: 100;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#page6 .container6 .review .description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-height: 0px;
+    position: relative;
+    transition: max-height 0.5s ease
+}
+
+#page6 .container6 .review .service {
+    width: 100%;
+    padding-top: 30px;
+    opacity: 0;
+}
+
+#page6 .container6 .review .service h2 {
+    font-size: 1.3em;
+    font-weight: 100;
+    text-transform: capitalize;
+}
+
+#page6 .container6 .review .service .links {
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#page6 .container6 .review .service .links button {
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 6px 15px;
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+#page6 .container6 .review .client {
+    width: 100%;
+}
+
+#page6 .container6 .review .client h2 {
+    font-size: 1.2em;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+
+#page6 .container6 .review .client .profile {
+    margin: 5px 0 15px 0;
+    overflow: hidden;
+    width: 8em;
+    height: 8em;
+    border-radius: 15px;
+}
+
+#page6 .container6 .review .client .profile img {
+    width: 100%;
+    transition: 0.2s;
+}
+
+#page6 .container6 .review .client p {
+    font-size: 1.15em;
+    line-height: 1.2em;
+}
+
+
+#page7 {
+    width: 100%;
+    height: fit-content;
+    padding: 20px 20px 100px 20px;
+    font-family: neue;
+}
+
+#page7 .card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+#page7 .card-container .card {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #004D43;
+    position: relative;
+}
+
+#page7 .card-container .card h1 {
+    font-size: 4em;
+}
+
+#page7 .card-container .card button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: transparent;
+}
+
+#page7 .card-container .card-1 {
+    color: #CDEA68;
+}
+
+#page7 .card-container .card-1 button {
+    border: 1px solid #CDEA68;
+    color: #CDEA68;
+}
+
+#page7 .card-container .card-2 {
+    background-color: #212121;
+    flex-direction: column;
+    color: white;
+}
+
+#page7 .card-container .card-2 h1 {
+    line-height: 0.8em;
+}
+
+#page7 .card-container .card-2 h3 {
+    color: #CDEA68;
+}
+
+#page7 .card-container .card-2 button {
+    border: 1px solid white;
+    color: white;
+    letter-spacing: -1.5px;
+}
+
+#page7 .card-container .card-3 {
+    background-color: #212121;
+}
+
+#page7 .card-container .card-3 img {
+    height: 120px;
+}
+
+#page7 .card-container .card-3 button {
+    border: 1px solid white;
+    color: white;
+    letter-spacing: -1.5px;
+}
+
+#page8 {
+    width: 100%;
+    height: fit-content;
+    background-color: #CDEA68;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 100px 20px 70px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#page8 .headings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page8 .headings h1 {
+    font-family: Founders;
+    font-size: 4.5em;
+    text-transform: uppercase;
+    line-height: 0.8em;
+    letter-spacing: -1px;
+}
+
+#page8 .eye-container {
+    width: 100%;
+    position: static;
+}
+
+#page8 .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: neue;
+}
+
+#page8 .btn-container button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#page8 .btn-container>:nth-child(1) {
+    color: white;
+    background-color: black;
+}
+
+#page8 .btn-container>:nth-child(2) {
+    color: black;
+    text-transform: uppercase;
+}
+
+#page8 .btn-container>:nth-child(3) {
+    color: black;
+    background-color: transparent;
+}
+
+#page8 .btn-container button span {
+    margin-left: 20px;
+    font-size: 2.5em;
+    line-height: 0.5em;
+}
+
+#page9 {
+    width: 100%;
+    background-color: #F1F1F1;
+    font-family: neue;
+    padding: 80px 20px 40px 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#page9 .page9-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#page9 .page9-content .footer-title {
+    font-family: Founders;
+    font-size: 3.3em;
+    line-height: 0.8em;
+    text-transform: uppercase;
+}
+
+#page9 .page9-content .mid-content .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.7fr 0.5fr;
+    grid-template-areas:
+        "m s"
+        "l l"
+        "e e"
+    ;
+}
+
+#page9 .page9-content .mid-content .footer-links .m {
+    grid-area: m;
+}
+
+#page9 .page9-content .mid-content .footer-links .s {
+    grid-area: s;
+}
+
+#page9 .page9-content .mid-content .footer-links .l {
+    grid-area: l;
+}
+
+#page9 .page9-content .mid-content .footer-links .e {
+    grid-area: e;
+}
+
+#page9 .page9-content .mid-content .footer-links h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+#page9 .page9-content .mid-content .footer-links a {
+    text-decoration: underline;
+    color: black;
+    font-size: 0.9em;
+}
+
+#page9 .page9-content .mid-content .footer-links .links-gr {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+#page9 .fftr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#page9 .fftr .ochi {
+    font-size: 2em;
+}
+
+#page9 .fftr .copywriting {
+    width: 50%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+#page9 .fftr .copywriting h3 {
+    font-size: 0.9em;
+    font-weight: 100;
+}
+
+#page9 .fftr .copywriting h3 a {
+    color: black;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+
+/* Add specific styles for medium screens here */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #page1 .links {
+        overflow-y: scroll;
+        height: 100vh;
+    }
+
+    #page1 nav .middle {
+        display: none;
+    }
+
+    #page1 .links .menu-links {
+        margin-bottom: 50px;
+
+
+    }
+
+    #page1 .links .menu-links a {
+        font-size: 7em;
+    }
+
+    #page1 .links .footer-links h1 {
+        font-size: 1.2em;
+        font-weight: 100;
+    }
+
+    #page1 .links .footer-links a {
+        font-size: 1.2em;
+
+    }
+
+    #page1 .links .footer-links h3 {
+        font-size: 1.2em;
+        font-weight: 100;
+
+    }
+
+    #page1 {
+        height: 65vh;
+    }
+
+    #page1 nav {
+        padding: 10px 20px;
+    }
+
+    #page1 .hero {
+        height: 100%;
+    }
+
+    #page1 .hero .hero-text {
+        margin-top: 70px;
+        padding: 20px;
+    }
+
+    #page1 .hero .hero-text .text-elem img {
+        height: 3.5em;
+    }
+
+    #page1 .hero .hero-text .text-elem h1 {
+        font-size: 6em;
+        line-height: 0.7em;
+    }
+
+    #page1 .hero .hero-footer {
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #page1 .hero .hero-footer h3 {
+        font-size: 0.9em;
+        font-weight: 100;
+    }
+
+    #page1 .hero .hero-footer button {
+        font-size: 0.9em;
+        font-weight: 100;
+        border: 1px solid black;
+    }
+
+    #page2 .marquee {
+        height: 30vh;
+    }
+
+    #page2 .marquee .mar-slider p {
+        font-size: 13em;
+    }
+
+    #page3 {
+        padding: 15px;
+    }
+
+    #page3 .section1 p {
+        font-size: 2.5em;
+    }
+
+    #page3 .section2 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #page3 .section2 .right {
+        justify-content: center;
+    }
+
+    #page3 .section3 {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #page3 .section3 .left h1 {
+        font-size: 2.5em;
+        font-weight: 100;
+    }
+
+    #page3 .section3 .right {
+        width: 50%;
+    }
+
+    #page4 {
+        height: 50vh;
+        padding: 100px;
+    }
+
+    #page5 h1 {
+        font-size: 2.5em;
+    }
+
+    #page5 .container5 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #page5 .container5 .pro-elems {
+        width: calc(100% / 2 - 10px);
+    }
+
+    #page5 .container5 .pro-elems button {
+        border: 1px solid black;
+        padding: 4px 10px;
+    }
+
+    #page5 .container5 .pro-elems .elems-title .dot {
+        font-size: 2em;
+    }
+
+    #page5 .container5 .pro-elems .elems-title .title {
+        font-size: 1em;
+    }
+
+    #page5 .case-btn h2 {
+        font-weight: 100;
+    }
+
+    #page6 .page-title h1 {
+        font-size: 2.5em;
+    }
+
+    #page6 .container6 .review .service .links button {
+        border: 1px solid black;
+    }
+
+    #page7 .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #page7 .card-container .card {
+        height: 380px;
+    }
+
+    #page7 .card-container .card-2 {
+        flex: 1;
+    }
+
+    #page7 .card-container .card-3 {
+        flex: 1;
+    }
+
+    #page8 .headings h1 {
+        font-size: 7.2em;
+    }
+
+    #page8 .eye-container .eyes {
+        width: 22vw;
+        height: 22vw;
+    }
+
+    #page9 .page9-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #page9 .page9-content .footer-title {
+        font-size: 5.2em;
+    }
+
+    #page9 .page9-content .mid-content {
+        flex: 1;
+        margin-left: 100px;
+    }
+
+    #page9 .page9-content .mid-content .footer-links {
+        grid-template-areas:
+            "s h"
+            "l m"
+            "e e"
+        ;
+    }
+
+    #page9 .page9-content .mid-content .footer-links .m {
+        margin-left: 100px;
+    }
+
+    #page9 .fftr {
+        align-items: center;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    #page9 .fftr .copywriting {
+        flex-direction: row;
+        gap: 100px;
+        margin-top: 0;
+    }
+
+    #page9 .fftr .copywriting h3 {
+        font-size: 1em;
+        color: #686868d0;
+    }
+
+    #page9 .fftr .copywriting h3 a {
+        font-size: 1em;
+        color: #686868d0;
+    }
+}
+
+/* Add specific styles for large screens here */
+@media only screen and (min-width: 992px) {
+    #page1 {
+        height: 100vh;
+    }
+
+    #page1 nav {
+        align-items: center;
+        padding: 5px 50px;
+    }
+
+    #page1 nav .logo {
+        font-size: 3em;
+
+    }
+
+    #page1 nav .menu {
+        display: none;
+    }
+
+    #page1 nav .middle {
+        display: flex;
+        font-family: neue;
+        gap: 20px;
+    }
+
+    #page1 nav .middle a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.3em;
+    }
+
+    #page1 nav .middle a:nth-child(5) {
+        margin-left: 15vw;
+    }
+
+
+
+    #page1 .hero {
+        height: 100%;
+        padding: 60px 50px;
+    }
+
+    #page1 .hero .hero-text {
+        margin-top: 70px;
+        padding: 20px;
+    }
+
+    #page1 .hero .hero-text .text-elem img {
+        height: 6em;
+    }
+
+    #page1 .hero .hero-text .text-elem h1 {
+        font-size: 10em;
+        line-height: 0.8em;
+    }
+
+    #page1 .hero .hero-footer {
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #page1 .hero .hero-footer h3 {
+        font-size: 1.1 em;
+        font-weight: 100;
+    }
+
+    #page1 .hero .hero-footer button {
+        font-size: 0.9em;
+        font-weight: 100;
+        border: 1px solid black;
+    }
+
+    #page2 .marquee {
+        height: 100vh;
+        padding-top: 130px;
+        align-items: start;
+    }
+
+    #page2 .marquee .mar-slider p {
+        font-size: 30em;
+        line-height: 0.7em;
+        padding-bottom: 10px;
+    }
+
+
+    #page3 .section1 {
+        padding: 100px 50px;
+    }
+
+    #page3 .section1 p {
+        font-size: 4em;
+        width: 90%;
+    }
+
+    #page3 .section2 {
+        padding: 10px 50px;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    #page3 .section2 h3 {
+        font-size: 1.25em;
+    }
+
+    #page3 .section2 .left {
+        width: 50%;
+    }
+
+    #page3 .section2 .right {
+        flex-direction: row;
+        padding: 0 10px;
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #page3 .section3 {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 50px 50px 50px;
+    }
+
+    #page3 .section3 .left h1 {
+        font-size: 4em;
+        font-weight: 100;
+    }
+
+    #page3 .section3 .right {
+        width: 50%;
+        height: 550px;
+    }
+
+    #page4 {
+        height: 100vh;
+        padding: 100px;
+        justify-content: center;
+    }
+
+    #page4 img {
+        width: 90%;
+    }
+
+    .eye-container .eyes {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .eye-container .eyes .layer-1 .layer-2 h2 {
+        font-size: 1.5em;
+    }
+
+    #page5 h1 {
+        font-size: 4em;
+        margin: 100px 50px 40px 50px;
+    }
+
+    #page5 .container5 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 50px 50px;
+    }
+
+    #page5 .container5 .pro-elems {
+        width: calc(100% / 2 - 10px);
+    }
+
+    #page5 .container5 .pro-elems button {
+        border: 1px solid black;
+        padding: 4px 10px;
+    }
+
+    #page5 .container5 .pro-elems .elems-title .dot {
+        font-size: 2.3em;
+    }
+
+    #page5 .container5 .pro-elems .elems-title .title {
+        font-size: 1.3em;
+    }
+
+    #page5 .case-btn h2 {
+        font-weight: 100;
+    }
+
+    #page6 .page-title {
+        padding: 20px 50px;
+
+    }
+
+    #page6 .page-title h1 {
+        font-size: 2.5em;
+    }
+
+    #page6 .container6 .review {
+        padding: 0px 50px;
+    }
+
+    #page6 .container6 .review .service .links button {
+        border: 1px solid black;
+    }
+
+    #page6 .container6 .review .description {
+        margin: -50px auto 0;
+        flex-direction: row;
+        width: 60%;
+    }
+
+    #page6 .container6 .review .description .service {
+        padding: 0;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #page6 .container6 .review .description .service .links {
+        margin-top: 50px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #page6 .container6 .review .description .service .links button {
+        position: relative;
+        width: fit-content;
+    }
+
+    #page6 .container6 .review .client {
+        width: 50%;
+    }
+
+    #page6 .container6 .review .client .profile {
+        margin-top: 50px;
+    }
+
+    #page6 .container6 .review .client p {
+        font-size: 1.25em;
+    }
+
+
+
+
+
+    #page7 {
+        padding: 20px 50px 100px 50px;
+    }
+
+    #page7 .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #page7 .card-container .card {
+        height: 450px;
+    }
+
+    #page7 .card-container .card-1 {
+        flex: 2;
+    }
+
+    #page7 .card-container .card-2 {
+        flex: 1;
+    }
+
+    #page7 .card-container .card-3 {
+        flex: 1;
+    }
+
+    #page8 {
+        padding: 150px 50px;
+        position: relative;
+    }
+
+    #page8 .headings h1 {
+        font-size: 18em;
+    }
+
+    #page8 .eye-container {
+        position: absolute;
+        top: 150px;
+        left: 0px;
+        height: 60%;
+    }
+
+    #page8 .eye-container .eyes {
+        width: 12vw;
+        height: 12vw;
+    }
+
+    #page8 .btn-container button {
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+        font-size: 1.2em;
+    }
+
+    #page9 {
+        width: 100%;
+        padding: 150px 50px 100px 50px;
+        position: relative;
+        height: 100vh;
+    }
+
+    #page9 .page9-content {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #page9 .page9-content .footer-title {
+        font-size: 10em;
+        flex: 1;
+    }
+
+    #page9 .page9-content .mid-content {
+        flex: 1;
+        margin-left: 100px;
+    }
+
+    #page9 .page9-content .mid-content .footer-links {
+        grid-template-areas:
+            "s h"
+            "l m"
+            "e e"
+        ;
+    }
+
+    #page9 .page9-content .mid-content .footer-links .m {
+        margin-left: 100px;
+    }
+
+    #page9 .fftr {
+        width: calc(100% - 100px);
+        align-items: center;
+        flex-direction: row;
+        margin-top: 20px;
+        position: absolute;
+        bottom: 20px;
+        left: 50px;
+    }
+
+    #page9 .fftr .ochi {
+        font-size: 3em;
+        flex: 1;
+    }
+
+    #page9 .fftr .copywriting {
+        flex: 1;
+        flex-direction: row;
+        gap: 100px;
+        margin: 0 0 0 50px;
+        justify-content: space-between;
+    }
+
+    #page9 .fftr .copywriting h3 {
+        font-size: 1.2em;
+        color: #686868d0;
+    }
+
+    #page9 .fftr .copywriting h3 a {
+        font-size: 1em;
+        color: #686868d0;
+    }
+}
