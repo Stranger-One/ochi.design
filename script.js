@@ -38,11 +38,6 @@ menu.addEventListener("click", ()=>{
     }
 })
 
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const accordions = document.querySelectorAll('.review');
     document.querySelector('.desc-1').style.maxHeight = 'fit-content';
@@ -74,6 +69,33 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// GSAP Animations
+// console.log(gsap)
+
+gsap.from(".animate-header", {
+    duration: 1,
+    y: -100,
+    opacity: 0,
+    ease: "power2.out",
+    stagger: 0.01
+})
+gsap.from(".hero-heading", {
+    duration: 1,
+    y: 100,
+    opacity: 0,
+    delay: 0.5,
+    ease: "power2.out",
+    stagger: 0.1
+})
+gsap.from(".hero-footer-text", {
+    duration: 1,
+    y: -100,
+    opacity: 0,
+    delay: 0.5,
+    ease: "power2.out",
+    stagger: 0.2
+})
 
 
 
